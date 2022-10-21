@@ -1,0 +1,189 @@
+@media screen and (min-height: 700px) {
+    .welcome-description {
+        margin-top: 100px;
+    }
+}
+
+@media screen and (min-height: 750px) {
+    .welcome-description {
+        margin-top: 150px;
+    }
+}
+
+@media screen and (min-width: 400px) {
+    .project-img {
+        min-height: 400px;
+    }
+}
+
+
+@media screen and (min-width: 550px) {
+    .welcome-container {
+        align-items: center;
+    }
+
+    .soc-links {
+        width: 500px;
+    }
+
+    nav {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        width: 100%;
+        justify-content: center;
+        font-size: 22px;
+    }
+
+    nav a {
+        padding-left: 50px;
+        cursor: pointer;
+        text-decoration: none;
+        color: white;
+        transition: all .5s ease;
+    }
+
+    nav a:hover {
+        color: var(--purple);
+    }
+
+    .bars {
+        display: none;
+    }
+}
+
+@media screen and (min-width: 700px) {
+    .soc-links {
+        width: 600px;
+    }
+    
+    .back-img {
+        background-size: contain;
+        filter: blur(0px);
+        background-position: 320px;
+    }
+
+    .welcome-description h2 {
+        font-size: 3em;
+        letter-spacing: 2px;
+    }
+
+    .welcome-description h1 {
+        font-size: 5em;
+        font-weight: 600;
+    }
+
+    .welcome-description h3 {
+        font-size: 1.5em;
+        font-weight: 400;
+    }
+
+    .about-container h2 {
+        font-size: 25px;
+    }
+
+    .about-container h1 {
+        font-size: 35px;
+    }
+
+    .info {
+        text-align: center;
+    }
+
+    .profile h3 {
+        font-size: 20px;
+    }
+
+    .skills-container h2 {
+        font-size: 35px;
+    }
+
+    .profile-and-skills {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .skills-container {
+        margin: 0;
+        margin-top: 50px;
+    }
+
+    .profile {
+        width: unset;
+    }
+
+    .skills-info img {
+        padding-right: 70px;
+    }
+
+    .projects-container h3 {
+        font-size: 25px;
+    }
+
+    .projects-container h2 {
+        font-size: 35px;
+    }
+
+    .projects-container {
+        padding-inline: 15px;
+        border-radius: 50px 50px 50px 50px;
+    }
+
+    .projects-list {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        column-gap: 20px;
+    }
+
+    .project.calculator {
+        border-radius: 10px;
+        margin-bottom: 100px;
+    }
+
+}
+
+@media screen and (max-width: 800px) {
+    .project p {
+        overflow-y: scroll;
+    }
+}
+
+@media screen and (min-width: 1000px) {
+    .about-container {
+        padding-inline: 100px;
+    }
+
+    .my-img img {
+        width: 300px;
+        min-height: 300px;
+    }
+}
+
+
+@media screen and (min-width: 1300px) {
+    .project-img {
+        min-height: unset;
+        height: 400px;
+    }
+
+    .projects-container {
+        padding-inline: 100px;
+    }
+
+    .about-container {
+        padding-inline: 300px;
+    }
+
+    footer {
+        padding-inline: 100px;
+    }
+}
+
+
+@media screen and (min-width: 1520px) {
+    .projects-list {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+}

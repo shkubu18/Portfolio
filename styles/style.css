@@ -1,0 +1,680 @@
+@import url('https://fonts.googleapis.com/css2?family=Cookie&family=Love+Ya+Like+A+Sister&family=Source+Code+Pro:wght@200;300;400;500;600;700;800;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --purple: rgb(106, 25, 212);
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    font-family: 'Cookie', cursive;
+    font-family: 'Love Ya Like A Sister', cursive;
+    font-family: 'Source Code Pro', monospace;
+    background: aliceblue;
+}
+
+/**********************************************************/
+
+/* While load */
+
+#load {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    z-index: 9999;
+    background: url(../assets/imgs/giphy.gif);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: black;
+}
+
+/* While load
+
+
+/* Header styles */
+
+header {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    z-index: 1;
+    min-width: 100%;
+    background: rgba(0, 0, 0, 0.459);
+}
+
+nav {
+    display: none;
+    font-family: 'Love Ya Like A Sister', cursive;
+}
+
+.menu-icons img {
+    height: 35px;
+    transition: all .7s ease;
+}
+
+.menu-icons {
+    max-height: 35px;
+    z-index: 2;
+}
+
+.xmark {
+    display: none;
+    transform: scale(0);
+
+}
+
+.logo {
+    font-family: 'Cookie', cursive;
+    font-size: 28px;
+    color: black;
+    background-color: white;
+    border-radius: 50%;
+    padding-inline: 5px;
+    padding-top: 6px;
+    min-height: 40px;
+    max-height: 40px;
+    animation: animation 4s linear infinite;
+}
+
+@keyframes animation {
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.hidden-menu {
+    font-family: 'Love Ya Like A Sister', cursive;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    min-height: 100vh;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+    font-size: 25px;
+    background: linear-gradient(45deg, var(--purple) 50%, rgba(0, 0, 0, 0.61));
+    padding-top: 120px;
+    padding-bottom: 95px;
+    transform: translateX(-500px);
+    transition: all 1.5s ease;
+    z-index: 1;
+}
+
+.hidden-menu a {
+    padding-bottom: 25px;
+    text-decoration: none;
+    color: white;
+}
+
+
+/* And off header styles */
+
+
+/* Welcome container styles */
+
+.welcome-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+    background-image: url(../assets/imgs/welcome-background.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-width: 100vw;
+    min-height: 100vh;
+    z-index: -1;
+    padding-bottom: 50px;
+}
+
+/* And off welcome container styles */
+
+
+/* Welcome description styles */
+
+.welcome-description {
+    color: white;
+    font-size: 15px;
+    padding-inline: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    font-family: 'Source Code Pro', monospace;
+    display: none;
+    opacity: 0;
+    transition: all 2s ease;
+}
+
+.welcome-description h2 {
+    color: var(--purple);
+    font-size: 2em;
+}
+
+.welcome-description h1 {
+    font-size: 3em;
+}
+
+.welcome-description h3 {
+    font-size: 1em;
+    margin-top: 10px;
+}
+
+.welcome-btn {
+    padding-inline: 25px;
+    padding-block: 15px;
+    background-color: transparent;
+    color: white;
+    border: 2px ridge white;
+    font-size: 1.1em;
+    display: flex;
+    flex-direction: row;
+    font-family: 'Source Code Pro', monospace;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all .5s ease;
+}
+
+.welcome-btn:hover {
+    background-color: var(--purple);
+}
+
+.welcome-btn span {
+    display: flex;
+    align-items: center;
+    padding-left: 10px;
+}
+
+.welcome-btn img {
+    height: 18px;
+}
+
+.soc-links {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-top: 130px;
+    background: linear-gradient(var(--purple), black);
+    padding-block: 10px;
+    margin-inline: 15px;
+    border-radius: 10px 40px 10px 40px;
+    display: none;
+    opacity: 0;
+    transition: all 2s ease;
+}
+
+.soc-links img {
+    height: 23px;
+}
+
+
+/* And off welcome description styles */
+
+
+/* About container styles */
+
+.about-container {
+    margin-top: 150px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding-inline: 15px;
+    font-family: 'Source Code Pro', monospace;
+}
+
+.about-me {
+    transform: scale(0);
+    transition: all 2s ease;
+}
+
+.about {
+    color: var(--purple);
+    font-size: 17px;
+    margin-bottom: 5px;
+}
+
+.my-img img {
+    width: 190px;
+    max-height: 200px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-bottom: 50px;
+}
+
+.about-container h1 {
+    font-size: 24px;
+    margin-bottom: 50px;
+    font-weight: 600;
+}
+
+.about-description p {
+    background: linear-gradient(var(--purple), black);
+    color: white;
+    border-radius: 10px 40px 10px 40px;
+    padding: 15px;
+    max-width: 1000px;
+}
+
+.welcome-btn-link {
+    text-decoration: none;
+    margin-top: 50px;
+}
+
+.profile {
+    margin-top: 50px;
+    width: 100%;
+    margin-bottom: 50px;
+}
+
+.profile h3 {
+    font-size: 15px;
+}
+
+.info {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+
+.fullname {
+    margin-bottom: 20px;
+}
+
+.birthdate {
+    margin-bottom: 20px;
+}
+
+.name,
+.date,
+.myemail {
+    color: rgb(223, 223, 223);
+    font-weight: 400;
+    padding-top: 5px;
+}
+
+/* And off about container styles */
+
+
+/* Skill container styles */
+
+
+.profile-and-skills {
+    width: 100%;
+    color: white;
+    background: linear-gradient(var(--purple), rgba(191, 144, 253, 0.851));
+    padding-inline: 20px;
+    margin-top: 100px;
+    border-radius: 10px 80px 10px 80px;
+    transform: scaleX(0);
+    transition: all 2s ease;
+}
+
+.skills-container {
+    padding-inline: 15px;
+    margin-top: 100px;
+}
+
+.skills-info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.skills-info img {
+    height: 50px;
+}
+
+.skills-container h2 {
+    text-align: center;
+    margin-bottom: 50px;
+    font-weight: 600;
+}
+
+.html-icon,
+.css-icon,
+.js-icon {
+    padding-left: 8px;
+
+}
+
+.react {
+    padding-left: 6px;
+}
+
+
+.bootstrap {
+    padding-left: 5px;
+}
+
+.html,
+.css,
+.js,
+.react,
+.php,
+.bootstrap,
+.git {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.git {
+    padding-left: 7px;
+}
+
+.html span,
+.css span,
+.js span,
+.react span,
+.php span,
+.bootstrap span,
+.git span {
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.cv-download {
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+}
+
+.cv-download a {
+    text-decoration: none;
+}
+
+.cv-download button {
+    margin-top: 50px;
+    padding-inline: 40px;
+    padding-block: 15px;
+    background: black;
+    color: white;
+    border: none;
+    font-size: 1.1em;
+    display: flex;
+    flex-direction: row;
+    font-family: 'Source Code Pro', monospace;
+    cursor: pointer;
+    transition: all .5s ease;
+}
+
+.cv-download button:hover {
+    background-color: rgb(25, 2, 110);
+}
+
+/* And off skill container styles */
+
+
+/* Projects container style */
+
+.projects-container {
+    margin-top: 170px;
+    text-align: center;
+    background-color: #1f1f1f;
+    padding-inline: 25px;
+    border-radius: 50px 50px 0px 0px;
+    transform: scaleX(0);
+    transition: all 2s ease;
+}
+
+
+.project-description-and-links {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+
+
+.projects-container h3 {
+    color: rgb(238, 20, 86);
+    margin-bottom: 5px;
+    padding-top: 50px;
+}
+
+.projects-container h2 {
+    font-weight: 600;
+    color: white;
+}
+
+.projects-list {
+    margin-top: 40px;
+    padding-bottom: 100px;
+}
+
+.project {
+    width: 100%;
+    margin-bottom: 80px;
+    border-radius: 10px;
+    max-width: 650px;
+    max-height: 600px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: all .5s ease;
+    cursor: pointer;
+}
+
+.project:hover {
+    transform: scale(1.05);
+}
+
+.project.georgian-kitchen {
+    background: linear-gradient(45deg, rgba(255, 166, 0, 0.651), rgba(255, 255, 0, 0.851));
+}
+
+.project.e-commerce {
+    background-color: #272626;
+}
+
+.project.children-platform {
+    background-color: rgb(167, 235, 252);
+}
+
+.project.regions {
+    background-color: #272626;
+}
+
+.project.weather-app {
+    background-color: rgb(88, 188, 255);
+}
+
+.project.calculator {
+    background-color: #00474B;
+    margin: 0;
+    border-radius: 10px;
+}
+
+.project p {
+    margin-block: 20px;
+    padding-inline: 15px;
+    color: white;
+    text-shadow: 2px 2px 2px rgb(77, 77, 77);
+    max-height: 100px;
+    
+}
+
+.project-descr-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 190px;
+}
+
+.project-img {
+    width: 100%;
+    height: 230px;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+.project-links img {
+    width: 25px;
+    height: 20px;
+}
+
+.project-links {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-top: 20px;
+    padding-inline: 15px;
+    padding-bottom: 10px;
+}
+
+.project-links a {
+    text-decoration: none;
+    color: white;
+}
+
+.live-link,
+.source-link {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    font-size: 14px;
+}
+
+.live-link span,
+.source-link span {
+    margin-right: 10px;
+    font-family: 'Love Ya Like A Sister', cursive;
+}
+
+@keyframes animation2 {
+    100% {
+        transform: rotateY(360deg);
+    }
+}
+
+.live-link img {
+    animation: animation2 4s linear infinite;
+}
+
+/* And off projects container style */
+
+
+/* Footer styles */
+
+footer {
+    padding-top: 150px;
+    background-color: #1f1f1f;
+    text-align: center;
+    padding-inline: 15px;
+    padding-bottom: 20px;
+}
+
+footer h2 {
+    color: var(--purple);
+    font-size: 18px;
+    margin-bottom: 5px;
+}
+
+footer h1 {
+    color: white;
+    font-size: 24px;
+    margin-bottom: 50px;
+}
+
+.send-email {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+
+.send-email label {
+    color: white;
+    font-size: 18px;
+    font-family: 'Love Ya Like A Sister', cursive;
+}
+
+.send-email input {
+    margin-bottom: 20px;
+}
+
+.send-email input,
+textarea {
+    border-radius: 5px;
+    padding: 10px;
+    font-family: 'Love Ya Like A Sister', cursive;
+    border: none;
+    outline: none;
+    max-width: 700px;
+}
+
+.send-email a {
+    text-align: center;
+    text-decoration: none;
+    margin-top: 50px;
+    padding-inline: 40px;
+    padding-block: 15px;
+    background: var(--purple);
+    color: white;
+    border: none;
+    font-size: 1.1em;
+    font-family: 'Source Code Pro', monospace;
+    max-width: 700px;
+}
+
+.contact-info {
+    display: flex;
+    flex-direction: column;
+    color: white;
+    margin-top: 70px;
+}
+
+.contact-info img {
+    width: 25px;
+}
+
+.contact-info .phone,
+.email,
+.location {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    padding-bottom: 25px;
+}
+
+.location span {
+    text-align: left;
+    padding: 0;
+}
+
+.contact-info span {
+    padding-left: 30px;
+}
+
+.soc-links.footer {
+    background: none;
+    margin: 0;
+    margin-block: 50px;
+    width: 100%;
+}
+
+.footer-end {
+    color: white;
+}
+
+/* And off footer styles */
